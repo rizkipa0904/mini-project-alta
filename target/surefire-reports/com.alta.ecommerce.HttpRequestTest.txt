@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.alta.ecommerce.HttpRequestTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.238 s - in com.alta.ecommerce.HttpRequestTest
