@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: com.alta.ecommerce.HttpRequestTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.238 s - in com.alta.ecommerce.HttpRequestTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 39.455 s <<< FAILURE! - in com.alta.ecommerce.HttpRequestTest
+greetingShouldReturnDefaultMessage  Time elapsed: 22.306 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  "[]"
+to contain:
+  "id" 
+	at com.alta.ecommerce.HttpRequestTest.greetingShouldReturnDefaultMessage(HttpRequestTest.java:30)
+
