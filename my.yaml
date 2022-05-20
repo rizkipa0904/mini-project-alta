@@ -1,26 +1,24 @@
-
-   
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: restapi-deployment
   labels:
-    app: nodeapp
+    app: restapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: restapi
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: restapi 
     spec:
       containers:
-      - name: nodeserver
-        image: thetips4you/nodeapp:latest
+      - name: restapi
+        image: rafdev0904/ecommerce:73
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
         
         
 ---
@@ -28,13 +26,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp-service
+  name: restapi-service
 spec:
   selector:
-    app: nodeapp 
+    app: restapi
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 3000
-    nodePort: 31110
+    port: 8081
+    targetPort: 8080
+    nodePort: 31112
