@@ -1,4 +1,3 @@
-  
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,8 +15,8 @@ spec:
         app: restapi 
     spec:
       containers:
-      - name: nodeserver
-        image: rafdev0904/ecommerce:71
+      - name: restapi
+        image: rafdev0904/ecommerce:73
         ports:
         - containerPort: 8080
         
